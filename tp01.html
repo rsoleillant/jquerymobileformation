@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TP 01</title>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="libs/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="libs/jquery.mobile-1.4.5.css"/>
+  </head>
+  <body >
+   <section data-role="page" data-theme="a" id="page1">
+        <header data-role="header" data-id="myheader" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Retour">
+                <h1>L'équipe</h1>
+        </header>
+        <article data-role="content" data-theme="a" >
+            <p>Page 1
+            </p>
+            <a href="#page2" data-transition="turn" data-role="button" data-shadow="false" data-corners="false">turn</a>
+            <a href="#page2" data-transition="slideup" data-role="button"  data-inline="true">slideup</a>
+            <a href="#page2" data-transition="slidedown"  data-role="button" data-mini="true">slidedown</a>
+            <div data-role="controlgroup">
+                    <a href="#page2" data-transition="fade"  data-role="button">fade</a>
+                    <a href="#page2" data-transition="flip"  data-role="button">flip</a>
+                    <a href="#page2" data-transition="flow"  data-role="button" data-theme="b">flow</a>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+                    <a href="#page3" data-transition="fade"  data-role="button">P3</a>
+                    <a href="#page3" data-transition="flip"  data-role="button">P3</a>
+                    <a href="#page3" data-transition="flow"  data-role="button" >Page 3</a>
+                    
+            </div>
+           
+
+        </article>
+        <footer data-role="footer" data-position="fixed" class="ui-bar">
+               <a href="#page1">P1</a>
+               <a href="#page2">P2</a>
+               <a href="#page3">P3</a>
+               <a href="#page3" data-transition="flow"  data-role="button" >Page 3</a>
+               
+        </footer>
+   </section>
+
+   <section data-role="page" data-theme="a" id="page2">
+        <header data-role="header" data-id="myheader" data-position="fixed" data-add-back-btn="true">
+                <a href="#page1">P1</a> 
+                <a href="#page3">P3</a>   
+            <h1>Page 2</h1>
+             
+        </header>
+        <article data-role="content" data-theme="b">
+            <p>Page 2
+            </p>
+            <a href="#page1" data-transition="pop" data-icon="eye" data-role="button" data-direction="reverse" >Pop</a>
+            <a href="#page1" data-transition="slideup"  data-direction="reverse" data-icon="cloud" data-iconpos="top" data-role="button">slideup</a>
+            <a href="#page1" data-transition="slidedown" data-role="button" data-icon="star" data-iconpos="notext">slidedown</a>
+            <a href="#page1" data-transition="fade"  data-direction="reverse">fade</a>
+            <a href="#page3" data-transition="flip"  data-role="button" data-direction="reverse">Page 3</a>
+        </article>
+        <footer data-role="footer" data-position="fixed">
+                <img src="img/nuages.jpg"/>
+        </footer>
+   </section>
+    
+<!-- page3 -->
+
+   <section data-role="page" data-theme="a" id="page3"  >
+        <header data-role="header" data-id="myheader" data-position="fixed" data-fullscreen="true" data-add-back-btn="true">
+              
+                <h1>Page 3</h1>
+        </header>
+        <article data-role="content" data-theme="b">
+         
+            <a href="#page1" data-transition="pop" data-role="button"  data-direction="reverse" >Page 1</a>
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+             un très grand texte avec plein de saut de page pour voir ce que ça donne
+
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br> 
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br> 
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br> 
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br> 
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br>
+
+             un très grand texte avec plein de saut de page pour voir ce que ça donne<br> 
+        </article>
+        <footer data-role="footer" data-position="fixed">
+               <nav data-role="navbar" data-iconpos="right">
+                   <ul>
+                       <li><a href="#page1" data-icon="arrow-r" >G1</a></li>
+                       <li><a href="#page1">Item 2</a></li>
+                       <li><a href="#page1">Item 3</a></li>
+                       <li><a href="#page4">P 4</a></li>
+                       <li><a href="#page1">Item 5</a></li>
+                   </ul>
+               </nav>
+        </footer>
+   </section>
+
+
+   <!-- page4 -->
+   
+      <section data-role="page" data-theme="a" id="page4"  >
+           <header data-role="header" data-id="myheader" data-position="fixed" >
+                 
+                   <h1>Page 4</h1>
+           </header>
+           <aside data-role="panel" id="panel1" data-position="left" data-display="reveal">
+               
+                <a href="#" data-role="button" data-rel="close">fermer</a>
+                <p> gestion panel gauche</p>
+            </aside>
+            <aside data-role="panel" id="panel2" data-position="right" data-display="overlay">
+                    <p> gestion panel droit</p>
+                </aside>
+           <article data-role="content" >
+            
+               <p><a href="#panel1">Afficher panneau gauche</a></p>
+               <p><a href="#panel2">Afficher panneau droit</a></p>
+               <p><a href="#modal1">Afficher fenêtre modale</a></p>
+           </article>
+           <footer data-role="footer" data-position="fixed">
+                  <nav data-role="navbar" data-iconpos="right">
+                      <ul>
+                          <li><a href="#page1" data-icon="arrow-r" >G1</a></li>
+                          <li><a href="#page1">Item 2</a></li>
+                          <li><a href="#page1">Item 3</a></li>
+                          <li><a href="#page1">Item 4</a></li>
+                          <li><a href="#page1">Item 5</a></li>
+                      </ul>
+                  </nav>
+           </footer>
+      </section>
+
+      <!-- fenetre modale -->
+      <section data-role="dialog"  id="modal1"  >
+           <header data-role="header">
+               <h1>Confirmer votre choix</h1>
+           </header>
+            <article data-role="content" >
+             
+              <p>Message de confirmation ici</p>
+            </article>
+            
+       </section>
+  </body>
+</html>

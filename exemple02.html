@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>IndexedDB</title>
+        <script src="js/modernizr-custom_v2.js"> </script>
+<script type="text/javascript">
+Modernizr.on('indexeddb', function(result) {
+    if (result) {
+      // supported
+      console.log('indexeddb ok');
+      var request=indexedDB.open('librairie');
+
+        request.onupgradeneeded=function()
+        {
+           // initialisation de la bdd     
+           var db=request.result;
+           var store=db.createObjectStore('livres',{keyPath:"isb"});
+           store.put({
+                titre : "Ma vie mon oeuvre",
+                auteur : "Franky Ribéry",
+                isb:10
+           }); 
+           store.put({
+                titre : "Deuxième livre",
+                auteur : "BW",
+                isb:20
+           }); 
+
+           store.put({
+                titre : "Livre 3",
+                auteur : "Auteur",
+                isb:10
+           }); 
+        }
+
+        request.onsuccess=function()
+        {
+          // ouverture de la bdd  
+          var db=request.result;
+          var transaction=db.transaction(['livres']);
+          var objectStore=transaction.objectStore['livres'];
+          var res=objectStore.get(20);
+            res.onsuccess=function(event)
+            {
+                console.log(event);
+            }
+            res.onerror=function(event)
+            {
+                console.log(event);
+            }
+        }
+
+    } else {
+      // not-supported
+      console.log('indexeddb not ok');
+    }
+  });
+
+</script>
+
+       
+
+    </head>
+    <body >
+     test
+    </body>
+</html>
