@@ -23,16 +23,18 @@
             for(var i=0;i<arra_result.articles.length;i++)
             {
                //- construction du li
-               var stri_li='<li>'+arra_result.articles[i].titre+'</li>'; 
+               var stri_li='<li><h2>'+arra_result.articles[i].titre+'</h2><p>'+arra_result.articles[i].texte+'</p></li>'; 
               
                obj_liste_foot.append(stri_li);   
 
             }
+
+            obj_liste_foot.listview('refresh');
         });
      }
     </script>
   </head>
-  <body onload="getData();">
+  <body >
    <section data-role="page" data-theme="a" id="page1">
         <header data-role="header" data-id="myheader" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Retour">
                 <h1>L'équipe</h1>
@@ -52,6 +54,7 @@
                     <a href="#page3" data-transition="fade"  data-role="button">P3</a>
                     <a href="#page3" data-transition="flip"  data-role="button">P3</a>
                     <a href="#page3" data-transition="flow"  data-role="button" >Page 3</a>
+                    <a href="#page4" data-transition="flow"  data-role="button" >Page 4</a>
                     
             </div>
            
@@ -170,7 +173,7 @@
                     <p> gestion panel droit</p>
                 </aside>
            <article data-role="content" >
-            
+                <p><a href="#page1">Page 1</a></p>
                <p><a href="#panel1">Afficher panneau gauche</a></p>
                <p><a href="#panel2">Afficher panneau droit</a></p>
                <p><a href="#modal1" data-rel="dialog">Afficher fenêtre modale</a></p>
@@ -183,7 +186,7 @@
                    <li>Scoubidou </li>
                </ul>
 
-               <ul data-role='listview' data-inset="true" id="liste_foot">
+               <ul data-role='listview' data-inset="true" id="liste_foot" data-filter="true" data-filter-placeholder="Rechercher" data-filter-reveal="true">
                    
                </ul>
            </article>
@@ -211,7 +214,132 @@
             </article>
             
        </section>
+ <section data-role="page" data-theme="a" id="page4"  >
+           <header data-role="header" data-id="myheader" data-position="fixed" >
+                 
+                   <h1>Page 4</h1>
+           </header>
+           <aside data-role="panel" id="panel1" data-position="left" data-display="reveal">
+               
+                <a href="#" data-role="button" data-rel="close">fermer</a>
+                <p> gestion panel gauche</p>
+            </aside>
+            <aside data-role="panel" id="panel2" data-position="right" data-display="overlay">
+                    <p> gestion panel droit</p>
+                </aside>
+           <article data-role="content" >
+                <p><a href="#page1">Page 1</a></p>
+               <p><a href="#panel1">Afficher panneau gauche</a></p>
+               <p><a href="#panel2">Afficher panneau droit</a></p>
+               <p><a href="#modal1" data-rel="dialog">Afficher fenêtre modale</a></p>
+             
+               <ul data-role='listview' data-inset="true">
+                   <li data-role="list-divider">Fruits </li>
+                   <li>Pomme </li>
+                   <li>Poire </li>
+                   <li data-role="list-divider">Objet </li>
+                   <li>Scoubidou </li>
+               </ul>
 
+               <ul data-role='listview' data-inset="true" id="liste_foot" data-filter="true" data-filter-placeholder="Rechercher" data-filter-reveal="true">
+                   
+               </ul>
+           </article>
+           <footer data-role="footer" data-position="fixed">
+                  <nav data-role="navbar" data-iconpos="right">
+                      <ul>
+                          <li><a href="#page1" >Item 1</a></li>
+                          <li><a href="#page1">Item 2</a></li>
+                          <li><a href="#page1">Item 3</a></li>
+                          <li><a href="#page1">Item 4</a></li>
+                          <li><a href="#page5">Page 5</a></li>
+                      </ul>
+                  </nav>
+           </footer>
+      </section>
       
+       <!-- page5 -->
+   
+       <section data-role="page" data-theme="a" id="page5"  >
+            <header data-role="header" data-id="myheader" data-position="fixed" >
+                  
+                    <h1>Page 5</h1>
+            </header>
+            <div data-role="collapsible" data-iconpos="right" data-collapsed="false" > 
+                <h3>voir plus</h3>
+                <p>un très grand texte</p>
+            </div>
+            <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                            <a href="#" data-role="button">Bt 01</a>
+                    </div> 
+                    <div class="ui-block-b">
+                            <a href="#" data-role="button">Bt 2.1</a>
+                            <a href="#" data-role="button">Bt 2.2</a>
+                    </div>
+                    <div class="ui-block-c">
+                            <a href="#" data-role="button">Bt 03</a>
+                    </div>
+                   
+            </div>
+           
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <input type="radio" value="Va1" name="rad01" id="homme"/>
+                <label for="homme">Homme</label>
+                <input type="radio" value="Va2" name="rad01" id="femme"/>
+                <label for="femme">Femme</label>
+                <input type="radio" value="Va2" name="rad01" id="autre"/>
+                <label for="autre">autre</label>            
+            </fieldset>
+
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="checkbox" value="Va1" name="rad01" id="chien"/>
+                    <label for="chien">Chien</label>
+                    <input type="checkbox" value="Va2" name="rad01" id="chat"/>
+                    <label for="chat">Chat</label>
+                    <input type="checkbox" value="Va2" name="rad01" id="poisson_rouge"/>
+                    <label for="poisson_rouge">Poisson rouge</label>            
+                </fieldset>
+           <input type="text" name="the_nom" placeholder="NOM" data-clear-btn="true" data-mini="true"/>
+           <input type="text" name="the_nom" placeholder="NOM" data-clear-btn="true" />
+           <input type="url" name="the_nom" placeholder="URL" data-clear-btn="true" />
+           <input type="tel" name="the_nom" placeholder="TEL" data-clear-btn="true" />
+           <input type="number" name="the_nom" placeholder="number" data-clear-btn="true" />
+           <input type="date" name="the_nom" placeholder="date" data-clear-btn="true" />
+           <input type="month" name="the_nom" placeholder="month" data-clear-btn="true" />
+           <input type="range" name="the_nom" placeholder="range" data-clear-btn="true" />
+          <select data-role="slider">
+                <option>off</option>
+                <option>on</option>                
+           </select> 
+           <select multiple="true" data-native-menu="false" name="select02">
+                <optgroup label="Groupe 1">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                </optgroup>
+                <optgroup label="Groupe 2">
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                        <option>Option 5</option>
+                        <option>Option 6</option>
+                </optgroup>
+                
+                              
+           </select> 
+           <article data-role="content" >
+              
+            </article>
+            <footer data-role="footer" data-position="fixed">
+                   <nav data-role="navbar" data-iconpos="right">
+                       <ul>
+                           <li><a href="#page1" >P 1</a></li>
+                           <li><a href="#page1">Item 2</a></li>
+                           <li><a href="#page1">Item 3</a></li>
+                           <li><a href="#page1">Item 4</a></li>
+                           <li><a href="#page1">Item 5</a></li>
+                       </ul>
+                   </nav>
+            </footer>
+       </section>
   </body>
 </html>
